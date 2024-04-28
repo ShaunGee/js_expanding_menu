@@ -14,3 +14,17 @@ body{
     margin-right: 50px;
 
 }
+
+@media (max-width: 600px) {
+    
+}
+
+/* Media query for screens larger than 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+  
+}
+
+/* Media query for screens larger than 900px */
+@media (min-width: 900px) {
+    
+}
