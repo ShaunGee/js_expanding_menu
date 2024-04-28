@@ -12,8 +12,76 @@ body{
     gap: 30px;
     list-style: none;
     margin-right: 50px;
+    
 
 }
+
+#hamburger_menu_container{
+   display: none;
+   align-content: flex-end;
+   flex-direction: column;
+   margin-left: 80%;
+   margin-top: 20px;
+   
+    
+}
+
+.hamburger_menu_line{
+    border-top-style: solid;
+    height: 10px;
+    width: 50px;
+    caret-color: transparent;
+    
+    
+}
+
+#hamburget_menu_container_inactive{
+    display: none;
+    align-content: flex-end;
+    flex-direction: column;
+    margin-left: 80%;
+    margin-top: 20px;
+   
+    transform: rotate()
+}
+
+
+#hamburger_menu_container div:nth-child(1) {
+    
+}
+
+#hamburger_menu_container div:nth-child(2) {
+    
+}
+
+#hamburger_menu_container div:nth-child(3) {
+    
+}
+
+/*
+
+//remove middle line
+hamburger_menu_lines[1].style.display = 'none';
+
+//rotate lines
+hamburger_menu_lines[0].style.transform = 'rotate(50deg)'
+hamburger_menu_lines[2].style.transform = 'rotate(-50deg)'
+
+//move origin
+hamburger_menu_lines[0].style.transformOrigin = '10% 20%';
+hamburger_menu_lines[2].style.transformOrigin = '50% 90%';
+
+});
+*/
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
     
