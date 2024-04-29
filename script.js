@@ -1,8 +1,13 @@
 let normalMenu = document.getElementById('nav_menu');
+let navMenuContainer = document.getElementById('hamburger_menu_container');
 let hamburgerMenu = document.getElementById('hamburger_menu_container');
 
 const hamburger_menu_lines = document.querySelectorAll('.hamburger_menu_line');
 let hamburgerMenuStatus =true;
+
+const popUpNavMenu = document.createElement('div');
+const body = document.getElementsByTagName('body')[0];
+
 
 function menu_transform(){
     let screenWidth = window.innerWidth
@@ -66,6 +71,9 @@ function hbMenuOpen(){
         //move origin
         hamburger_menu_lines[0].style.transformOrigin = '10% 20%';
         hamburger_menu_lines[2].style.transformOrigin = '50% 90%';
+
+        nav_transform();
+
         hamburgerMenuStatus = false;
 
         
@@ -84,11 +92,34 @@ function hbMenuClose(){
         //return origin
         hamburger_menu_lines[0].style.transformOrigin = '0';
         hamburger_menu_lines[2].style.transformOrigin = '0';
+        nav_transform();
         hamburgerMenuStatus=true;
+        
+        
     
 }
 
 
 
+function nav_transform(){
+    
+    popUpNavMenu.id = 'pop_up_menu';
+    if(hamburgerMenuStatus && !body.contains(popUpNavMenu)){
+  
+        body.appendChild(popUpNavMenu);
+        const [...menuElements] = document.getElementById('nav_menu').children;
+        
+        menuElements.forEach(element => {
+            popUpNavMenu.appendChild(element);
+        });
+        
+        
+    }
+    else if (!hamburgerMenuStatus && body.contains(popUpNavMenu)){
+
+        body.removeChild(popUpNavMenu);
+    }
+
+}
 //
 

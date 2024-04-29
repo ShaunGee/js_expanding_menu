@@ -1,6 +1,7 @@
 body{
+    position: absolute;
     width: 100%;
-    height: 1vh;
+    height: 100vh;
     
 }
 
@@ -12,6 +13,7 @@ body{
     gap: 30px;
     list-style: none;
     margin-right: 50px;
+   
     
 
 }
@@ -36,6 +38,7 @@ body{
 }
 
 #hamburget_menu_container_inactive{
+    
     display: none;
     align-content: flex-end;
     flex-direction: column;
@@ -45,54 +48,26 @@ body{
     transform: rotate()
 }
 
+#pop_up_menu{
+    position:fixed;
+    right: 0;
+    top:100px;
+    left: 50px;
+    z-index: 2;
+    width: 90%;
+    height: 100vh;
+    background-color: rgb(212, 156, 156);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-#hamburger_menu_container div:nth-child(1) {
-    
+
 }
 
-#hamburger_menu_container div:nth-child(2) {
-    
+#pop_up_menu li{
+    list-style: none;
+    font-size: 30px;
 }
 
-#hamburger_menu_container div:nth-child(3) {
-    
-}
 
-/*
-
-//remove middle line
-hamburger_menu_lines[1].style.display = 'none';
-
-//rotate lines
-hamburger_menu_lines[0].style.transform = 'rotate(50deg)'
-hamburger_menu_lines[2].style.transform = 'rotate(-50deg)'
-
-//move origin
-hamburger_menu_lines[0].style.transformOrigin = '10% 20%';
-hamburger_menu_lines[2].style.transformOrigin = '50% 90%';
-
-});
-*/
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 600px) {
-    
-}
-
-/* Media query for screens larger than 900px */
-@media (min-width: 600px) and (max-width: 900px) {
-  
-}
-
-/* Media query for screens larger than 900px */
-@media (min-width: 900px) {
-    
-}
